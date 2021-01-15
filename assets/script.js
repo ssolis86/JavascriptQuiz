@@ -1,23 +1,18 @@
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
-var lowerCase = "abcdefghijklmnopqrstuvwxyz".split("");
-var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-var specialCharacters = "!@#$%^&*()-_+=".split("");
-var numberS = "1234567890".split("");
+//Assignment Code
+var generateBtn = document.querySelector("#button");
 
 
-// Write password to the #password input
-function generatePassword() {
-  var userPrompt = prompt("Please select a length of characters between 8 - 128 characters");
-}
-
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
+function startQuiz(){
+   
 
 }
 
+function nextPage() {
+    var password = startQuiz();
+  console.log("hello")
+
+  }
+
+generateBtn.addEventListener("click",nextPage);
 
 
