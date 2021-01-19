@@ -1,3 +1,7 @@
+*, *::before, *::after{
+  box-sizing: border-box;
+  
+}
 
 html,
 body,
@@ -25,11 +29,11 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
-title {
-    
+.hide {
+  display: none;
 }
 
-.card {
+/* .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
   border-width: 1px;
@@ -59,4 +63,4 @@ title {
 
 .float-right {
   float: right;
-}
+} */

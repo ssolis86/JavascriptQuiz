@@ -5,30 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Coding Quiz Challenge</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
-    rel="stylesheet" 
-    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
-    crossorigin="anonymous">
+    <!--Bootstrap CSS Link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!--My CSS File-->
     <link rel="stylesheet" href="assets/style.css" />
 </head>
     <body>
     <div class="wrapper">
-        <nav class="navbar navbar-light bg-light">
-            <div class="container-fluid">
-                <span class="navbar-brand mb-0 h1">Navbar </span>
-                <h4 id="countdown"></h2>
-            </div>
-        </nav>
-        <div class="text-center title" id="">
-            <h1>Coding Quiz Challenge</h1>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"></span>
+            <h4 id="countdown"></h4>
         </div>
-        <div class="card">
-            <div id = "codingQuiz" class="card-body">
-               
+    </nav>
+        <div class="container text-center title">
+            <div id = "quiz-container" class="">
+                <h1>Coding Quiz Challenge</h1>
+                <div id = "quiz-question" class="hide">
+                    <p>This is question one.</p>
+                </div>
+                <div id="button-options">
+                    <button class="hide" id="optionA">Option A</button>
+                    <button class="hide" id="optionB">Option B</button>
+                    <button class="hide" id="optionC">Option C</button>
+                    <button class="hide" id="optionD">Option D</button>
+                    <button class="text-center"id="startButton"type="button"class="btn btn-dark">Start</button>
+                </div>
+                <div id="indicator-div">
+
+                </div>
             </div>
-        </div>
-        <div class="text-center" id = "buttonS">
-            <button id="button" type="button" class="btn btn-dark">Start</button>
         </div>
     </div>
     <script src="assets/script.js"></script>
