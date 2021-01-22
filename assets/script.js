@@ -71,17 +71,18 @@ function questionOne() {
     optionB.textContent = answerB[0];
     optionC.textContent = answerC[0];
     optionD.textContent = answerD[0];
-    
-    function userAlert(event) {
         
+    function userAlert(event) {
+        console.log("test");
         if (answersArray[0] === event.target.textContent) {
             document.getElementById("indicator-div").textContent = "Your're Right";
             userScore++;
+            console.log(userScore);
         }
         else {
             document.getElementById("indicator-div").textContent = "Your're Wrong";
             timeLeft = timeLeft-5;
-            userScore--;
+            
         }
         questionTwo();
     }
@@ -94,7 +95,7 @@ function questionOne() {
 }
 
 function questionTwo() {
-
+    
     questionText.textContent = questionBank[1];
     optionA.textContent = answerA[1];
     optionB.textContent = answerB[1];
@@ -102,19 +103,35 @@ function questionTwo() {
     optionD.textContent = answerD[1];
     
     function userAlert(event) {
-        
+        console.log("test2");
         if (answersArray[1] === event.target.textContent) {
             document.getElementById("indicator-div").textContent = "Your're Right";
             userScore++;
+            console.log(userScore);
         }
         else {
             document.getElementById("indicator-div").textContent = "Your're Wrong";
             timeLeft = timeLeft-5;
-            userScore--;
+            
         }
         questionThree();
     }
     
+    var aClone = optionA.cloneNode(true);
+    optionA.parentNode.replaceChild(aClone, optionA);
+    
+    var bClone = optionB.cloneNode(true);
+    optionB.parentNode.replaceChild(bClone, optionB);
+    
+    var cClone = optionC.cloneNode(true);
+    optionC.parentNode.replaceChild(cClone, optionC);
+    
+    var dClone = optionD.cloneNode(true);
+    optionD.parentNode.replaceChild(dClone, optionD);
+    optionA = document.getElementById("optionA");
+    optionB = document.getElementById("optionB");
+    optionC = document.getElementById("optionC");
+    optionD = document.getElementById("optionD");
     optionA.addEventListener("click", userAlert);
     optionB.addEventListener("click", userAlert);
     optionC.addEventListener("click", userAlert);
@@ -139,12 +156,26 @@ function questionThree() {
         else {
             document.getElementById("indicator-div").textContent = "Your're Wrong";
             timeLeft = timeLeft-5;
-            userScore--;
+            
         }
         questionFour();
     }
     
-
+    var aClone = optionA.cloneNode(true);
+    optionA.parentNode.replaceChild(aClone, optionA);
+    
+    var bClone = optionB.cloneNode(true);
+    optionB.parentNode.replaceChild(bClone, optionB);
+    
+    var cClone = optionC.cloneNode(true);
+    optionC.parentNode.replaceChild(cClone, optionC);
+    
+    var dClone = optionD.cloneNode(true);
+    optionD.parentNode.replaceChild(dClone, optionD);
+    optionA = document.getElementById("optionA");
+    optionB = document.getElementById("optionB");
+    optionC = document.getElementById("optionC");
+    optionD = document.getElementById("optionD");
     optionA.addEventListener("click", userAlert);
     optionB.addEventListener("click", userAlert);
     optionC.addEventListener("click", userAlert);
@@ -169,12 +200,26 @@ function questionFour() {
         else {
             document.getElementById("indicator-div").textContent = "Your're Wrong";
             timeLeft = timeLeft-5;
-            userScore--;
+            
         }
         questionFive();
     }
     
-
+    var aClone = optionA.cloneNode(true);
+    optionA.parentNode.replaceChild(aClone, optionA);
+    
+    var bClone = optionB.cloneNode(true);
+    optionB.parentNode.replaceChild(bClone, optionB);
+    
+    var cClone = optionC.cloneNode(true);
+    optionC.parentNode.replaceChild(cClone, optionC);
+    
+    var dClone = optionD.cloneNode(true);
+    optionD.parentNode.replaceChild(dClone, optionD);
+    optionA = document.getElementById("optionA");
+    optionB = document.getElementById("optionB");
+    optionC = document.getElementById("optionC");
+    optionD = document.getElementById("optionD");
     optionA.addEventListener("click", userAlert);
     optionB.addEventListener("click", userAlert);
     optionC.addEventListener("click", userAlert);
@@ -199,12 +244,26 @@ function questionFive() {
         else {
             document.getElementById("indicator-div").textContent = "Your're Wrong";
             timeLeft = timeLeft-5;
-            userScore--;
+            
         }
         questionSix();
     }
     
-
+    var aClone = optionA.cloneNode(true);
+    optionA.parentNode.replaceChild(aClone, optionA);
+    
+    var bClone = optionB.cloneNode(true);
+    optionB.parentNode.replaceChild(bClone, optionB);
+    
+    var cClone = optionC.cloneNode(true);
+    optionC.parentNode.replaceChild(cClone, optionC);
+    
+    var dClone = optionD.cloneNode(true);
+    optionD.parentNode.replaceChild(dClone, optionD);
+    optionA = document.getElementById("optionA");
+    optionB = document.getElementById("optionB");
+    optionC = document.getElementById("optionC");
+    optionD = document.getElementById("optionD");
     optionA.addEventListener("click", userAlert);
     optionB.addEventListener("click", userAlert);
     optionC.addEventListener("click", userAlert);
@@ -229,12 +288,26 @@ function questionSix() {
         else {
             document.getElementById("indicator-div").textContent = "Your're Wrong";
             timeLeft = timeLeft-5;
-            userScore--;
+            
         }
         questionSeven();
     }
     
-
+    var aClone = optionA.cloneNode(true);
+    optionA.parentNode.replaceChild(aClone, optionA);
+    
+    var bClone = optionB.cloneNode(true);
+    optionB.parentNode.replaceChild(bClone, optionB);
+    
+    var cClone = optionC.cloneNode(true);
+    optionC.parentNode.replaceChild(cClone, optionC);
+    
+    var dClone = optionD.cloneNode(true);
+    optionD.parentNode.replaceChild(dClone, optionD);
+    optionA = document.getElementById("optionA");
+    optionB = document.getElementById("optionB");
+    optionC = document.getElementById("optionC");
+    optionD = document.getElementById("optionD");
     optionA.addEventListener("click", userAlert);
     optionB.addEventListener("click", userAlert);
     optionC.addEventListener("click", userAlert);
@@ -259,12 +332,26 @@ function questionSeven() {
         else {
             document.getElementById("indicator-div").textContent = "Your're Wrong";
             timeLeft = timeLeft-5;
-            userScore--;
+            
         }
         questionEight();
     }
     
-
+    var aClone = optionA.cloneNode(true);
+    optionA.parentNode.replaceChild(aClone, optionA);
+    
+    var bClone = optionB.cloneNode(true);
+    optionB.parentNode.replaceChild(bClone, optionB);
+    
+    var cClone = optionC.cloneNode(true);
+    optionC.parentNode.replaceChild(cClone, optionC);
+    
+    var dClone = optionD.cloneNode(true);
+    optionD.parentNode.replaceChild(dClone, optionD);
+    optionA = document.getElementById("optionA");
+    optionB = document.getElementById("optionB");
+    optionC = document.getElementById("optionC");
+    optionD = document.getElementById("optionD");
     optionA.addEventListener("click", userAlert);
     optionB.addEventListener("click", userAlert);
     optionC.addEventListener("click", userAlert);
@@ -289,12 +376,26 @@ function questionEight() {
         else {
             document.getElementById("indicator-div").textContent = "Your're Wrong";
             timeLeft = timeLeft-5;
-            userScore--;
+            
         }
         questionNine();
     }
     
-
+    var aClone = optionA.cloneNode(true);
+    optionA.parentNode.replaceChild(aClone, optionA);
+    
+    var bClone = optionB.cloneNode(true);
+    optionB.parentNode.replaceChild(bClone, optionB);
+    
+    var cClone = optionC.cloneNode(true);
+    optionC.parentNode.replaceChild(cClone, optionC);
+    
+    var dClone = optionD.cloneNode(true);
+    optionD.parentNode.replaceChild(dClone, optionD);
+    optionA = document.getElementById("optionA");
+    optionB = document.getElementById("optionB");
+    optionC = document.getElementById("optionC");
+    optionD = document.getElementById("optionD");
     optionA.addEventListener("click", userAlert);
     optionB.addEventListener("click", userAlert);
     optionC.addEventListener("click", userAlert);
@@ -319,12 +420,26 @@ function questionNine() {
         else {
             document.getElementById("indicator-div").textContent = "Your're Wrong";
             timeLeft = timeLeft-5;
-            userScore--;
+            
         }
         questionTen();
     }
     
-
+    var aClone = optionA.cloneNode(true);
+    optionA.parentNode.replaceChild(aClone, optionA);
+    
+    var bClone = optionB.cloneNode(true);
+    optionB.parentNode.replaceChild(bClone, optionB);
+    
+    var cClone = optionC.cloneNode(true);
+    optionC.parentNode.replaceChild(cClone, optionC);
+    
+    var dClone = optionD.cloneNode(true);
+    optionD.parentNode.replaceChild(dClone, optionD);
+    optionA = document.getElementById("optionA");
+    optionB = document.getElementById("optionB");
+    optionC = document.getElementById("optionC");
+    optionD = document.getElementById("optionD");
     optionA.addEventListener("click", userAlert);
     optionB.addEventListener("click", userAlert);
     optionC.addEventListener("click", userAlert);
@@ -349,12 +464,26 @@ function questionTen() {
         else {
             document.getElementById("indicator-div").textContent = "Your're Wrong";
             timeLeft = timeLeft-5;
-            userScore--;
+            
         }
         scoreCheck();
     }
     
-
+    var aClone = optionA.cloneNode(true);
+    optionA.parentNode.replaceChild(aClone, optionA);
+    
+    var bClone = optionB.cloneNode(true);
+    optionB.parentNode.replaceChild(bClone, optionB);
+    
+    var cClone = optionC.cloneNode(true);
+    optionC.parentNode.replaceChild(cClone, optionC);
+    
+    var dClone = optionD.cloneNode(true);
+    optionD.parentNode.replaceChild(dClone, optionD);
+    optionA = document.getElementById("optionA");
+    optionB = document.getElementById("optionB");
+    optionC = document.getElementById("optionC");
+    optionD = document.getElementById("optionD");
     optionA.addEventListener("click", userAlert);
     optionB.addEventListener("click", userAlert);
     optionC.addEventListener("click", userAlert);
