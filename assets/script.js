@@ -7,31 +7,50 @@ var optionC = document.getElementById("optionC");
 var optionD = document.getElementById("optionD");
 var questionText = document.getElementById("quiz-question");
 var questionBank = 
-["1.) What is the correct JavaScript syntax to write Hello World?", 
+[
+"1.) What is the correct JavaScript syntax to write Hello World?", 
 "2.) Inside which HTML element do we put the JavaScript?",
-""];
-var answerA = ["System.out.println ('Hello World')", "<js>"];
-var answerB = ["println ('Hello World')", "<scripting>"];
-var answerC = ["document.write('Hello World')", "<script>"];
-var answerD = ["response.write('Hello World') ", "<javascript>"];
-var answersArray = ["4 ", "blah"];
+"3.) What is the correct syntax for referring to an external script called 'abc.js'?",
+"4.) Which of the following is not JavaScript Data Types?",
+"5.) Which company developed JavaScript?", 
+"6.) Which of the following is not Javascript frameworks or libraries?",
+"7.) Among the following, which one is a ternary operator in JavaScript?",
+"8.) Which of them is not the looping structures in JavaScript?",
+"9.) Which of the following function of Array object applies a function simultaneously against two values of the array (from right-to-left) as to reduce it to a single value?",
+"10.) In JavaScript, Arrays are data type. State True or False"];
+
+var answerA = ["System.out.println ('Hello World')", "<js>", "<script href=' abc.js'>", "Undefined", "Netscape", "Polymer", "#", "for", "pop()", "True"];
+var answerB = ["println ('Hello World')", "<scripting>", "<script name=' abc.js'>", "Number", "Bell Labs", "Meteor", "::", "while", "reduce()", "Maybe"];
+var answerC = ["document.write('Hello World')", "<script>", "<script src=' abc.js'>", "Boolean", "Sun Microsystems", "Cassandra", "&:", "forwhich", "push()", "I have no idea"];
+var answerD = ["response.write('Hello World') ", "<javascript>", "None of the above", "Float", "IBM", "JQuery", "?:", "dowhile", "reduceRight()", "False"];
+var answersArray = ["document.write('Hello World')", "<script>", "<script src=' abc.js'>", "Float", "Netscape", "Cassandra", "?:", "while", "reduceRight()", "False"];
 var userScore = 0;
 var timeLeft = 30;
 
+
+
+
 startBtn.addEventListener("click",initiateQuiz);
 
-
+//Quiz Initiator Function
+//This function sets a timer when quiz is initiated and displays the content of the question and answers 
+//to the appropriate buttons.
 function initiateQuiz() {
-   
-    
+       
     var timeInterval = setInterval(function() {
       
     if(timeLeft !== 0){
         --timeLeft;
         timerEl.textContent = timeLeft + " :seconds remaining";
+        
+    }
+    else{
+        timerEl.textContent = "Time's up!";
+        
     }
     
     }, 1000);
+    
 
     questionText.style.display = "block";
     optionA.style.display = "block";
@@ -42,7 +61,9 @@ function initiateQuiz() {
 
     questionOne();    
 }
-
+//Question One Function
+//This takes the user through the first question and calls the function for the subsequent
+//function thereafter.
 function questionOne() {
 
     questionText.textContent = questionBank[0];
@@ -60,20 +81,17 @@ function questionOne() {
         else {
             document.getElementById("indicator-div").textContent = "Your're Wrong";
             timeLeft = timeLeft-5;
+            userScore--;
         }
         questionTwo();
     }
     
-
     optionA.addEventListener("click", userAlert);
     optionB.addEventListener("click", userAlert);
     optionC.addEventListener("click", userAlert);
     optionD.addEventListener("click", userAlert);
 
-
 }
-
-
 
 function questionTwo() {
 
@@ -92,15 +110,15 @@ function questionTwo() {
         else {
             document.getElementById("indicator-div").textContent = "Your're Wrong";
             timeLeft = timeLeft-5;
+            userScore--;
         }
         questionThree();
     }
     
-
-    optionA.addEventListener("click", questionTwo);
-    optionB.addEventListener("click", questionTwo);
-    optionC.addEventListener("click", questionTwo);
-    optionD.addEventListener("click", questionTwo);
+    optionA.addEventListener("click", userAlert);
+    optionB.addEventListener("click", userAlert);
+    optionC.addEventListener("click", userAlert);
+    optionD.addEventListener("click", userAlert);
 
 }
 
@@ -121,15 +139,16 @@ function questionThree() {
         else {
             document.getElementById("indicator-div").textContent = "Your're Wrong";
             timeLeft = timeLeft-5;
+            userScore--;
         }
         questionFour();
     }
     
 
-    optionA.addEventListener("click", questionThree);
-    optionB.addEventListener("click", questionThree);
-    optionC.addEventListener("click", questionThree);
-    optionD.addEventListener("click", questionThree);
+    optionA.addEventListener("click", userAlert);
+    optionB.addEventListener("click", userAlert);
+    optionC.addEventListener("click", userAlert);
+    optionD.addEventListener("click", userAlert);
 
 }
 
@@ -150,15 +169,16 @@ function questionFour() {
         else {
             document.getElementById("indicator-div").textContent = "Your're Wrong";
             timeLeft = timeLeft-5;
+            userScore--;
         }
         questionFive();
     }
     
 
-    optionA.addEventListener("click", questionFour);
-    optionB.addEventListener("click", questionFour);
-    optionC.addEventListener("click", questionFour);
-    optionD.addEventListener("click", questionFour);
+    optionA.addEventListener("click", userAlert);
+    optionB.addEventListener("click", userAlert);
+    optionC.addEventListener("click", userAlert);
+    optionD.addEventListener("click", userAlert);
 
 }
 
@@ -179,15 +199,16 @@ function questionFive() {
         else {
             document.getElementById("indicator-div").textContent = "Your're Wrong";
             timeLeft = timeLeft-5;
+            userScore--;
         }
         questionSix();
     }
     
 
-    optionA.addEventListener("click", questionFive);
-    optionB.addEventListener("click", questionFive);
-    optionC.addEventListener("click", questionFive);
-    optionD.addEventListener("click", questionFive);
+    optionA.addEventListener("click", userAlert);
+    optionB.addEventListener("click", userAlert);
+    optionC.addEventListener("click", userAlert);
+    optionD.addEventListener("click", userAlert);
 
 }
 
@@ -208,15 +229,16 @@ function questionSix() {
         else {
             document.getElementById("indicator-div").textContent = "Your're Wrong";
             timeLeft = timeLeft-5;
+            userScore--;
         }
         questionSeven();
     }
     
 
-    optionA.addEventListener("click", questionSix);
-    optionB.addEventListener("click", questionSix);
-    optionC.addEventListener("click", questionSix);
-    optionD.addEventListener("click", questionSix);
+    optionA.addEventListener("click", userAlert);
+    optionB.addEventListener("click", userAlert);
+    optionC.addEventListener("click", userAlert);
+    optionD.addEventListener("click", userAlert);
 
 }
 
@@ -237,15 +259,16 @@ function questionSeven() {
         else {
             document.getElementById("indicator-div").textContent = "Your're Wrong";
             timeLeft = timeLeft-5;
+            userScore--;
         }
         questionEight();
     }
     
 
-    optionA.addEventListener("click", questionSeven);
-    optionB.addEventListener("click", questionSeven);
-    optionC.addEventListener("click", questionSeven);
-    optionD.addEventListener("click", questionSeven);
+    optionA.addEventListener("click", userAlert);
+    optionB.addEventListener("click", userAlert);
+    optionC.addEventListener("click", userAlert);
+    optionD.addEventListener("click", userAlert);
 
 }
 
@@ -266,15 +289,16 @@ function questionEight() {
         else {
             document.getElementById("indicator-div").textContent = "Your're Wrong";
             timeLeft = timeLeft-5;
+            userScore--;
         }
         questionNine();
     }
     
 
-    optionA.addEventListener("click", questionEight);
-    optionB.addEventListener("click", questionEight);
-    optionC.addEventListener("click", questionEight);
-    optionD.addEventListener("click", questionEight);
+    optionA.addEventListener("click", userAlert);
+    optionB.addEventListener("click", userAlert);
+    optionC.addEventListener("click", userAlert);
+    optionD.addEventListener("click", userAlert);
 
 }
 
@@ -295,15 +319,16 @@ function questionNine() {
         else {
             document.getElementById("indicator-div").textContent = "Your're Wrong";
             timeLeft = timeLeft-5;
+            userScore--;
         }
         questionTen();
     }
     
 
-    optionA.addEventListener("click", questionNine);
-    optionB.addEventListener("click", questionNine);
-    optionC.addEventListener("click", questionNine);
-    optionD.addEventListener("click", questionNine);
+    optionA.addEventListener("click", userAlert);
+    optionB.addEventListener("click", userAlert);
+    optionC.addEventListener("click", userAlert);
+    optionD.addEventListener("click", userAlert);
 
 }
 
@@ -324,18 +349,20 @@ function questionTen() {
         else {
             document.getElementById("indicator-div").textContent = "Your're Wrong";
             timeLeft = timeLeft-5;
+            userScore--;
         }
-        userAnswerCheck();
+        scoreCheck();
     }
     
 
-    optionA.addEventListener("click", questionTen);
-    optionB.addEventListener("click", questionTen);
-    optionC.addEventListener("click", questionTen);
-    optionD.addEventListener("click", questionTen);
+    optionA.addEventListener("click", userAlert);
+    optionB.addEventListener("click", userAlert);
+    optionC.addEventListener("click", userAlert);
+    optionD.addEventListener("click", userAlert);
 
 }
 
-function userAnswerCheck(){
+function scoreCheck(){
+    console.log(userScore);
 
 }
