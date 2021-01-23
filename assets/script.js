@@ -1,4 +1,5 @@
 //Assignment Code
+var pageTitle = document.getElementById("coding-quiz-title");
 var startBtn = document.querySelector("#startButton");
 var timerEl = document.getElementById("countdown");
 var optionA = document.getElementById("optionA");
@@ -6,6 +7,7 @@ var optionB = document.getElementById("optionB");
 var optionC = document.getElementById("optionC");
 var optionD = document.getElementById("optionD");
 var questionText = document.getElementById("quiz-question");
+var nextButton = document.getElementById("Next");
 var questionBank = 
 [
 "1.) What is the correct JavaScript syntax to write Hello World?", 
@@ -26,8 +28,13 @@ var answerD = ["response.write('Hello World') ", "<javascript>", "None of the ab
 var answersArray = ["document.write('Hello World')", "<script>", "<script src=' abc.js'>", "Float", "Netscape", "Cassandra", "?:", "while", "reduceRight()", "False"];
 var userScore = 0;
 var timeLeft = 30;
-
-
+questionText.hidden = true;
+    optionA.hidden = true;
+    optionB.hidden = true;
+    optionC.hidden = true;
+    optionD.hidden = true;
+    startBtn.hidden = false;
+    pageTitle.hidden = false;
 
 
 startBtn.addEventListener("click",initiateQuiz);
@@ -51,13 +58,13 @@ function initiateQuiz() {
     
     }, 1000);
     
-
-    questionText.style.display = "block";
-    optionA.style.display = "block";
-    optionB.style.display = "block";
-    optionC.style.display = "block";
-    optionD.style.display = "block";
-    startBtn.style.display = "none";
+    pageTitle.hidden = true;
+    questionText.hidden = false;
+    optionA.hidden = false;
+    optionB.hidden = false;
+    optionC.hidden = false;
+    optionD.hidden = false;
+    startBtn.hidden = true;
 
     questionOne();    
 }
@@ -75,12 +82,12 @@ function questionOne() {
     function userAlert(event) {
         console.log("test");
         if (answersArray[0] === event.target.textContent) {
-            document.getElementById("indicator-div").textContent = "Your're Right";
+            document.getElementById("indicator-div").textContent = "Correct!";
             userScore++;
             console.log(userScore);
         }
         else {
-            document.getElementById("indicator-div").textContent = "Your're Wrong";
+            document.getElementById("indicator-div").textContent = "Incorrect :(";
             timeLeft = timeLeft-5;
             
         }
@@ -105,12 +112,12 @@ function questionTwo() {
     function userAlert(event) {
         console.log("test2");
         if (answersArray[1] === event.target.textContent) {
-            document.getElementById("indicator-div").textContent = "Your're Right";
+            document.getElementById("indicator-div").textContent = "Correct!";
             userScore++;
             console.log(userScore);
         }
         else {
-            document.getElementById("indicator-div").textContent = "Your're Wrong";
+            document.getElementById("indicator-div").textContent = "Incorrect :(";
             timeLeft = timeLeft-5;
             
         }
@@ -150,11 +157,11 @@ function questionThree() {
     function userAlert(event) {
         
         if (answersArray[2] === event.target.textContent) {
-            document.getElementById("indicator-div").textContent = "Your're Right";
+            document.getElementById("indicator-div").textContent = "Correct!";
             userScore++;
         }
         else {
-            document.getElementById("indicator-div").textContent = "Your're Wrong";
+            document.getElementById("indicator-div").textContent = "Incorrect :(";
             timeLeft = timeLeft-5;
             
         }
@@ -194,11 +201,11 @@ function questionFour() {
     function userAlert(event) {
         
         if (answersArray[3] === event.target.textContent) {
-            document.getElementById("indicator-div").textContent = "Your're Right";
+            document.getElementById("indicator-div").textContent = "Correct!";
             userScore++;
         }
         else {
-            document.getElementById("indicator-div").textContent = "Your're Wrong";
+            document.getElementById("indicator-div").textContent = "Incorrect :(";
             timeLeft = timeLeft-5;
             
         }
@@ -238,11 +245,11 @@ function questionFive() {
     function userAlert(event) {
         
         if (answersArray[4] === event.target.textContent) {
-            document.getElementById("indicator-div").textContent = "Your're Right";
+            document.getElementById("indicator-div").textContent = "Correct!";
             userScore++;
         }
         else {
-            document.getElementById("indicator-div").textContent = "Your're Wrong";
+            document.getElementById("indicator-div").textContent = "Incorrect :(";
             timeLeft = timeLeft-5;
             
         }
@@ -282,11 +289,11 @@ function questionSix() {
     function userAlert(event) {
         
         if (answersArray[5] === event.target.textContent) {
-            document.getElementById("indicator-div").textContent = "Your're Right";
+            document.getElementById("indicator-div").textContent = "Correct!";
             userScore++;
         }
         else {
-            document.getElementById("indicator-div").textContent = "Your're Wrong";
+            document.getElementById("indicator-div").textContent = "Incorrect :(";
             timeLeft = timeLeft-5;
             
         }
@@ -326,11 +333,11 @@ function questionSeven() {
     function userAlert(event) {
         
         if (answersArray[6] === event.target.textContent) {
-            document.getElementById("indicator-div").textContent = "Your're Right";
+            document.getElementById("indicator-div").textContent = "Correct!";
             userScore++;
         }
         else {
-            document.getElementById("indicator-div").textContent = "Your're Wrong";
+            document.getElementById("indicator-div").textContent = "Incorrect :(";
             timeLeft = timeLeft-5;
             
         }
@@ -370,11 +377,11 @@ function questionEight() {
     function userAlert(event) {
         
         if (answersArray[7] === event.target.textContent) {
-            document.getElementById("indicator-div").textContent = "Your're Right";
+            document.getElementById("indicator-div").textContent = "Correct!";
             userScore++;
         }
         else {
-            document.getElementById("indicator-div").textContent = "Your're Wrong";
+            document.getElementById("indicator-div").textContent = "Incorrect :(";
             timeLeft = timeLeft-5;
             
         }
@@ -414,11 +421,11 @@ function questionNine() {
     function userAlert(event) {
         
         if (answersArray[8] === event.target.textContent) {
-            document.getElementById("indicator-div").textContent = "Your're Right";
+            document.getElementById("indicator-div").textContent = "Correct!";
             userScore++;
         }
         else {
-            document.getElementById("indicator-div").textContent = "Your're Wrong";
+            document.getElementById("indicator-div").textContent = "Incorrect :(";
             timeLeft = timeLeft-5;
             
         }
@@ -458,11 +465,11 @@ function questionTen() {
     function userAlert(event) {
         
         if (answersArray[9] === event.target.textContent) {
-            document.getElementById("indicator-div").textContent = "Your're Right";
+            document.getElementById("indicator-div").textContent = "Correct!";
             userScore++;
         }
         else {
-            document.getElementById("indicator-div").textContent = "Your're Wrong";
+            document.getElementById("indicator-div").textContent = "Incorrect :(";
             timeLeft = timeLeft-5;
             
         }
@@ -492,6 +499,15 @@ function questionTen() {
 }
 
 function scoreCheck(){
-    console.log(userScore);
+
+    document.getElementById("indicator-div").hidden = true;
+    document.getElementById("quiz-question").hidden = true;
+    document.getElementById("optionA").hidden = true;
+    document.getElementById("optionB").hidden = true;
+    document.getElementById("optionC").hidden = true;
+    document.getElementById("optionD").hidden = true;
+    document.getElementById("scoreDiv").textContent = ("Your Score is! " + userScore);
+    document.getElementById("Next").hidden = false;
+    
 
 }

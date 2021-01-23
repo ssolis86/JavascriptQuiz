@@ -15,6 +15,26 @@ body {
   font-family: sans-serif;
   background-color: #f9fbfd;
 }
+.title-heading {
+  font-family: Tahoma, Verdana, sans-serif;
+}
+.quiz-Question {
+  font-size: 30px;
+}
+.button {
+  background-color: blue;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.indicator-div {
+  font-size: 50px;
+}
 
 .wrapper {
   padding-top: 30px;
