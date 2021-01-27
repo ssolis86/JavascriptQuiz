@@ -31,14 +31,26 @@
                     <button class="button" id="optionD">Option D</button>
                     <button class="button text-center"id="startButton"type="button">Start</button>
                 </div>
-                <div class="indicator-div" id="indicator-div">
-                    
-                </div>
+                <div class="indicator-div" id="indicator-div"></div>
                 <div id="scoreDiv"></div>
-                <div id="nextButtonDiv">
-                    <button hidden class="button" id="Next">Next</button>
+                <div class="clearfix" id="submitScore">
+                    <div class="card">
+                      <h2>Enter your initials!</h2>
+                        <div class="input-group">
+                          <label for="email">User Initials</label>
+                          <input type="text" name="initials" id="userInitials"/>
+                        </div>
+                        <div id="msg"></div>
+                        <button class="button">Submit Score</button>
+                      
+                    </div>
+                    <div class="card" hidden>
+                      <h2>Highest Score:</h2>
+                      <p><strong>Initials</strong> <span id="user-initials"></span></p>
+                      <p><strong>Highest Score:</strong> <span id="highest-user-score"></span></p>
+                    </div>
+                  </div>
                 </div>
-            </div>
         </div>
     </div>
     <script src="assets/script.js"></script>

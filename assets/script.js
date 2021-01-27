@@ -7,7 +7,10 @@ var optionB = document.getElementById("optionB");
 var optionC = document.getElementById("optionC");
 var optionD = document.getElementById("optionD");
 var questionText = document.getElementById("quiz-question");
-var nextButton = document.getElementById("Next");
+var submitScore = document.getElementById("submitScore");
+var userInitials = document.querySelector("user-initials");
+var msgDiv = document.querySelector("#msg");
+
 var questionBank = 
 [
 "1.) What is the correct JavaScript syntax to write Hello World?", 
@@ -35,6 +38,7 @@ questionText.hidden = true;
     optionD.hidden = true;
     startBtn.hidden = false;
     pageTitle.hidden = false;
+    submitScore.hidden = true;
 
 
 startBtn.addEventListener("click",initiateQuiz);
@@ -507,7 +511,13 @@ function scoreCheck(){
     document.getElementById("optionC").hidden = true;
     document.getElementById("optionD").hidden = true;
     document.getElementById("scoreDiv").textContent = ("Your Score is! " + userScore);
-    document.getElementById("Next").hidden = false;
+    document.getElementById("submitScore").hidden = false;
     
+    scoreEntry();    
 
+}
+
+function scoreEntry() {
+    
+       
 }
