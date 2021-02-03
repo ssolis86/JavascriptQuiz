@@ -513,11 +513,9 @@ function scoreCheck(){
     document.getElementById("scoreDiv").textContent = ("Your Score is! " + userScore);
     document.getElementById("submitScore").hidden = false;
     
-    scoreEntry();    
+    var scoreInitials = document.querySelector("#userInitials");
+    var submitScoreButton = document.querySelector("");
+
 
 }
 
-function scoreEntry() {
-    
-       
-}
